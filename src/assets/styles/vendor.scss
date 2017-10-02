@@ -1,0 +1,12 @@
+//
+// miProyecto
+//
+
+@function image-url($url) {
+    @return url('../images/' + $url);
+}
+
+
+@import "reset";
+@import "vendor/slick";
+@import "vendor/slick-theme";

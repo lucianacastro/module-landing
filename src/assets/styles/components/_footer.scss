@@ -1,0 +1,120 @@
+.footer {
+	padding: 60px 0 90px 0;
+	font-family: 'Roboto', sans-serif;
+	color: $color--white;
+	overflow: hidden;
+	&__logo {
+		float: left;
+		width: 70px;
+		height: 70px;
+		margin-right: 30px;
+		background-image: url(../images/sprite.png);
+		background-position: -549px -263px;
+	}
+	&__description {
+		float: left;
+		max-width: 265px;
+		margin: 0;
+		font-size: 16px;
+		font-weight: $font__weigth--light;
+		line-height: 22px;
+		opacity: 0.6;
+	}
+	&__list {
+		float: left;
+		margin: 0 25px;
+		list-style-type: none;
+	}
+	&__list-item-container {
+		text-decoration: none;
+		margin: 10px 0;
+		opacity: 0.6;
+		&--main {
+			font-size: 18px;
+			margin: 0 0 20px 0;
+			opacity: 1;
+		}
+	} 
+	&__list-item {
+		text-decoration: none;
+		color: $color--white;
+		font-size: 16px;
+		font-weight: $font__weigth--light;
+	}
+	&__language-container {
+		opacity: 0.6;
+	}
+	&__language-select-container {
+		float: right;
+		position: relative;
+		height: 20px;
+		&:before {
+			display: inline-block;
+			content: '';
+			background: url(../images/sprite.png);
+			background-position: -538px -359px;
+			width: 15px;
+			height: 15px;
+			position: absolute;
+			top: 2px;
+			left: -25px;
+		}
+		&:after {
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 10px;
+			content: '';
+			background: url(../images/sprite.png);
+			background-position: -584px -359px;
+			width: 15px;
+			height: 15px;
+			pointer-events: none;
+		}
+	}
+	&__select-language {
+		padding-right: 30px;
+		font-size: 16px;
+		font-weight: $font__weigth--light;
+		border: none;
+		background-color: transparent;
+		-webkit-appearance: none;
+	    -moz-appearance: none;
+	    appearance: none;
+	}		
+}
+
+//MQ
+
+@media screen and (max-width: 639px) { 
+	.footer {
+    	padding: 60px 10px 90px 10px;
+		&__logo {
+			@include center-align;
+		}
+		&__description {
+			@include center-align;
+			max-width: 310px;
+		}
+		&__list {
+			width: calc(50% - 40px);
+			padding: 10px 20px;
+			margin: 0;
+		}
+		&__language-container {
+			float: left;
+			padding: 10px 14px;
+		}
+	}
+} 
+
+
+@media screen and (min-width:640px) and (max-width: 979px) {
+	.footer {
+		&__language-container {
+			float: left;
+			padding: 0px 80px;
+		}
+	}
+}
+
