@@ -1,0 +1,39 @@
+.container {
+	width: 100%;
+	max-width: 1140px;
+	margin: 0 auto;
+	overflow: hidden;
+	&--header {
+		margin-top: 30px; 
+	}
+}
+
+.container-lg {
+	width: 100%;
+	max-width: 1400px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.container-xl {
+	width: 100%;
+	overflow: hidden;
+	&--grey {
+		background-color: $color--grey;
+		padding: 120px 0 100px 0;
+		margin-top: -130px;
+		z-index: 100;
+	}
+	&--deep-grey {
+		background-color: $color--deep-grey;
+	}
+}
+
+@media screen and (max-width: 1180px) {
+	.container {
+		width: calc(100% - 40px);
+		&--full-width {
+			width: 100%;
+		}
+	}
+}

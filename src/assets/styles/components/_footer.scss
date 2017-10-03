@@ -11,6 +11,9 @@
 		background-image: url(../images/sprite.png);
 		background-position: -549px -263px;
 	}
+	&__description-container {
+		float: left;
+	}
 	&__description {
 		float: left;
 		max-width: 265px;
@@ -92,6 +95,9 @@
 		&__logo {
 			@include center-align;
 		}
+		&__description-container {
+			float: none;
+		}
 		&__description {
 			@include center-align;
 			max-width: 310px;
@@ -111,6 +117,10 @@
 
 @media screen and (min-width:640px) and (max-width: 979px) {
 	.footer {
+		&__description-container {
+			margin: 0 0 20px 60px;
+			width: 100%;
+		}
 		&__language-container {
 			float: left;
 			padding: 0px 80px;

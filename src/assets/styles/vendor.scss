@@ -6,6 +6,9 @@
     @return url('../images/' + $url);
 }
 
+@function font-url($url) {
+    @return url('../fonts/' + $url);
+}
 
 @import "reset";
 @import "vendor/slick";

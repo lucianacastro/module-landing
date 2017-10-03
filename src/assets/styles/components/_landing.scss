@@ -1,36 +1,6 @@
-.container {
-		width: 100%;
-		max-width: 1140px;
-		margin: 0 auto;
-		overflow: hidden;
-		&--header {
-			margin-top: 30px; 
-	}
-}
-
-.container-lg {
-	width: 100%;
-	max-width: 1400px;
-	margin: 0 auto;
-	overflow: hidden;
-}
-
-.container-xl {
-	width: 100%;
-	overflow: hidden;
-	&--grey {
-		background-color: $color--grey;
-		padding: 120px 0 100px 0;
-		margin-top: -130px;
-		z-index: 100;
-	}
-	&--deep-grey {
-		background-color: $color--deep-grey;
-	}
-}
 
 .headline {
-	padding: 130px 0 50px 0;
+	padding: 130px 0 80px 0;
 	text-align: center;
 	font-family: 'Roboto', sans-serif;
 	color: $color--grey-title;	
@@ -199,13 +169,13 @@
 	}
 
 	.slick-dots li button:before {
-		font-size: 20px;
+		font-size: 6px;
 		color: $color--grey-border;
 		opacity: 0.4;
     }
     .slick-dots li.slick-active button:before {
     	color: $color--light-blue;
-        font-size: 34px;
+        font-size: 10px;
         opacity: 1;
     }
     .slick-next.slick-arrow {
@@ -235,7 +205,7 @@
 		&__header {
 			padding: 15px 0 10px 0;
 			text-align: center;
-			border-bottom: 1px solid $color--grey-border;
+			border-bottom: 1px solid $color--light-blue-border;
 			margin: 0 30px;
 		}
 		&__header-title {
@@ -268,29 +238,34 @@
 			margin: 0 30px;
 			font-size: 16px;
 			line-height: 22px;
-			border-bottom: 1px solid $color--grey-border;
+			border-bottom: 1px solid $color--light-blue-border;
 			&--pro {
 				text-transform: capitalize;
 			}
 		}
 		&__body-features {
+			position: relative;
+			padding: 0 30px;
 			list-style-type: none;
 			text-align: left;
 			color: $color--grey-border;
 		}
 		&__body-feature {
 			margin: 30px 0 30px 30px;
+			font-size: 14px;
+			font-weight: $font__weigth--regular;
 			&--available {
-				margin: 30px 0 30px 5px;
 				color: $color--grey;
 				&:before {
+					position: absolute;
 					content: url(../images/check-icon.png);
 					margin: 0 15px 0 0;
+					left: 30px;
 				}
 			}
 		}
 		&__footer {
-			padding: 30px 0;
+			padding: 30px 20px;
 			overflow: hidden;
 		}
 		&__footer-cta {
@@ -330,7 +305,6 @@
 			.tout__body-features {
 				color: $color--white;
 			}
-			
 			.tout__body-period {
 				opacity: 0.7;
 			}
@@ -345,9 +319,6 @@
 				}
 			}
 
-			.tout__footer {
-				padding: 30px 0;
-			}
 			.tout__footer-cta {
 				background-color: $color--green;
 				border: 1px solid $color--green;
@@ -362,6 +333,7 @@
 .brands {
 	&__description {
 		text-align: center;
+		margin-bottom: 40px;
 		font-family: 'Roboto', sans-serif;
 		font-size: 18px;
 		font-weight: $font__weigth--light;
@@ -411,7 +383,10 @@
 
 @media screen and (max-width: 639px) { 
 	.headline {
-		padding: 130px 10px 50px 10px;
+		padding: 130px 30px 50px;
+		&__title {
+			font-size: 42px;
+		}
 	}
 	.capabilities {
 		padding-bottom: 0;
@@ -425,7 +400,7 @@
 		&__img {
 			width: 100%;
 			height: auto;
-			margin-left: 10px;
+			margin-left: -10px;
 		}
 		&__container {
 			width: 100%;
@@ -448,20 +423,6 @@
 			width: 100%;
 		}
 	}
-	.brands {
-		padding: 0 10px;
-		&__logos-container {
-			padding-left: 0;	
-		}
-		&__logo {
-			display: block;
-			float: none;
-			margin: 10px auto;
-			&:nth-of-type(1) {
-				margin: 10px auto;
-			}
-		}
-	}
 } 
 
 @media screen and (min-width:640px) and (max-width: 767px) {
@@ -473,13 +434,31 @@
 			}
 		}
 	}
-	.brands {
-		&__logo {
-			margin: 0px 20px 0 0;
-		}
+}
+
+@media screen and (min-width:768px) and (max-width: 1024px) {
+	.tout__body {
+		min-height: 521px;
 	}
 }
 
+@media screen and (max-width: 979px) { 
+	.brands {
+		padding: 0 10px;
+		&__logos-container {
+			padding-left: 0;	
+		}
+		&__logo {
+			display: block;
+			float: none;
+			margin: 15px auto;
+			&:nth-of-type(1) {
+				margin: 10px auto;
+			}
+		}
+	}
+}
+	    
 
 @media screen and (min-width:640px) and (max-width: 979px) {
 	.carousel {

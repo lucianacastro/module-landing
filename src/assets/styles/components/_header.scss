@@ -11,16 +11,14 @@
 
 .header__logo {
 	float: left;
-	width: 140px;
+	width: 125px;
 	height: 40px;
 }
 .header__logo-container {
 	float: left;
 	text-decoration: none;
-	width: 140px;
-	height: 40px;
 	background-image: url(../images/sprite.png);
-	background-position: -225px -12px;
+	background-position: -239px -12px;
 }
 
 .toggle-button {
@@ -84,5 +82,8 @@
 
 } 
 
-
-
+@media screen and (max-width: 1180px) {
+	.header__logo-container {
+		margin-left: 20px;
+	}
+}
