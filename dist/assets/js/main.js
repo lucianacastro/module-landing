@@ -20,28 +20,28 @@ $(function() {
 	   	}, 600);
 	});
 
-    $("#features-button, #features-button-container").click(function() {
+    $("#features-button-container").click(function() {
 	   	$('html, body').animate({
 	       scrollTop: $("#capabilities-section").offset().top - 150
 	   	}, 600);
 	   	$(".nav-menu").fadeToggle('fast');
 	});
 
-	$("#pricing-button, #pricing-button-container").click(function() {
+	$("#pricing-button-container").click(function() {
 		$('html, body').animate({
 			scrollTop: $("#pricing-section").offset().top
 		}, 600);
 		$(".nav-menu").fadeToggle('fast');
 	});
 
-	$("#more-button, #more-button-container").click(function() {
+	$("#more-button-container").click(function() {
 		$('html, body').animate({
 			scrollTop: $("#more-section").offset().top
 		}, 600);
 		$(".nav-menu").fadeToggle('fast');
 	});
 
-	$("#contact-button, #contact-button-container").click(function() {
+	$("#contact-button-container").click(function() {
 		$('html, body').animate({
 			scrollTop: $("#contact-section").offset().top
 		}, 600);
